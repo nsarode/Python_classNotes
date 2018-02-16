@@ -16,10 +16,13 @@
      - Count number of objects in list: `len(listName)`
      - NOTE: list operations (except `sorted`) are *in-place* methods i.e. they won't return any values, but modify original list in-place
 - tuples
-  - Declaration: `x = (1,2,3,4)`
+  - Declaration: `x = (1,2,3,4)` or `x = (2,)` <- if you want to declare a tuple with a single object. `x = (2)` will be      identified as integer.
   - tuple operations
+    - append : not possible, tuples are *immutable*
     - Concatanation`x + (3,4,7)`
-    - Length/count of objects: `len(x)`
+    - Length/count number of objects: `len(x)`
+    - count number of times an object repeats: `x=(1,4,2,3,4)`; To determine the number of times 4 is repeated `x.count(4)`
+    - sum of all objects within tuple: `sum(x)`
     - packing : adding objects to a tuple e.g. `x = 23`; `y = 38`; `packedTuple = (x,y)`
     - unpacking : `(a,b) = packedTuple`
     - for loop: if I have a list of tuples 
