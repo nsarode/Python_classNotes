@@ -6,15 +6,31 @@
   - dir function with object name or type as input  
 
 **Basics**
-- Declaration
-  - list : `x = [2,44,6,8]`
+- lists
+  - Declaration: `x = [2,44,6,8]`
   - list operations: 
-      - Add object: `listName.append()`
-      - Concatanate two lists: `listName1 + listName2`
-      - Reverse the order: `listName.reverse()`
-      - Sort: `listName.sort()`
-  - NOTE: list operations are *in-place* methods i.e. they won't return any values, but modify original list in-place
-
+     - Add object: `listName.append()`
+     - Concatanate two lists: `listName1 + listName2`
+     - Reverse the order: `listName.reverse()`
+     - Sort: `listName.sort()` <- *in-place* method Vs Sorted: `newListName = sorted(oldListName)` <- create a new sorted list
+     - Count number of objects in list: `len(listName)`
+     - NOTE: list operations (except `sorted`) are *in-place* methods i.e. they won't return any values, but modify original list in-place
+- tuples
+  - Declaration: `x = (1,2,3,4)`
+  - tuple operations
+    - Concatanation`x + (3,4,7)`
+    - Length/count of objects: `len(x)`
+    - packing : adding objects to a tuple e.g. `x = 23`; `y = 38`; `packedTuple = (x,y)`
+    - unpacking : `(a,b) = packedTuple`
+    - for loop: if I have a list of tuples 
+      
+          ```python
+          
+          coordinates = [(23,45),(32,65),(47,44)]
+          for (x,y) in coordinates:
+            print(x,y)
+          
+          ```
 **Methods, functions, attributes, objects**
 - Methods are functions associated with objects, whereas data attributes are data associated with objects. correct 
   - Function (a method) always ends with () e.g. `x= np.array([1,2,3])`; Function mean will be written as `x.mean()` 
