@@ -71,7 +71,23 @@
     - increment value of a key: `age["ram"] += 1`
     - get list of keys or values: `age.keys()` ; `age.values()` <- the returned values here is 'view' object which is updated as you modify the original dictionary
     - determine object membership i.e. if a certain key is in the dictionary: `"ram" in age`
-
+    - you can loop through keys. `for name in age:` or `for name in age.keys():` or if you want to parse in sorter manner `for name in sorted(age.keys()):` or `for name in sorted(age.keys(), reverse = True):`
+- `newList = list(oldeList)` or `newList = oldeList[:]` <- two ways of creating copies without both of them referring to the same object
+- the following code will return 3
+  ```
+    x=3
+    y=x
+    y=y-1 
+    x
+  ```
+- the following code will return [24,3,4]
+  ```
+    L1 = [2,3,4]
+    L2 = L1
+    L2[0] = 24 
+    L1 
+  ```
+  
 **Sequences**
   - Lists, tuples, "range objects"
   - These all support commond sequence operations, but also have methods of their own for specific operations
@@ -102,4 +118,5 @@ Attribute doesn't end with () e.g. `x.shape`
     - boolean types i.e. `True` or `False`, SHOULD be capitalized
     - boolean operations : `and`, `or`, `not`
   
-  
+
+
