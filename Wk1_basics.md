@@ -49,11 +49,28 @@
   - split : `names = name.split(" ")` <- give character that you want to use to split the string. this should give you a string with two objects "Tina" and "Fey"
   - change case of specific object within string: `names[0].upper()` ; `names[0].lower()`
 
-- Sets : unordered collection of distinct hashable objects 
+- Sets : unordered collection of distinct hashable objects
   - CANNOT be : indexed, contain repeat objects (if you try to add a repeat element, nothing happens)
   - two types : set <- mutable and frozen set <- immutable
-  - declaration: Empty set : `id = set()`; set with numbers: `id = set([1,2,3,4])`
+  - declaration: Empty set : `id = set()`; set with numbers: `id = set([1,2,3,4,7,8,9])`
   - add element: `id.add(5)`
+  - extremely useful for set operations 
+    - `male = set([3,5])` ; `female = id - male`
+    - union operation: `everyone = male | female`
+    - interserct: `everyone & set([2,4])`
+    - e.g. word = "ghewihtqgjhowbhgwoingoe"; To do operations on this string, we could convert this into set. 
+      `letters = set(word)`
+      `len(letters)` <- will give list of unique alphabets (remember that set will keep only unique letters)
+- Dictionaries (equivalent to Perl Hashes)
+  - unordered key value pairs where keys are immutable
+  - declaration: 
+    - Empty dictionaries: `age = {}` or `age = dict()`
+    - with data: `age = {"ram":24, "sita":22, "laxman": 19, "ravan":35}`
+  - operations
+    - Derive value of a key: `age["ram"]`
+    - increment value of a key: `age["ram"] += 1`
+    - get list of keys or values: `age.keys()` ; `age.values()` <- the returned values here is 'view' object which is updated as you modify the original dictionary
+    - determine object membership i.e. if a certain key is in the dictionary: `"ram" in age`
 
 **Sequences**
   - Lists, tuples, "range objects"
