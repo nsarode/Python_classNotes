@@ -49,6 +49,12 @@
   - split : `names = name.split(" ")` <- give character that you want to use to split the string. this should give you a string with two objects "Tina" and "Fey"
   - change case of specific object within string: `names[0].upper()` ; `names[0].lower()`
 
+- Sets : unordered collection of distinct hashable objects 
+  - CANNOT be : indexed, contain repeat objects (if you try to add a repeat element, nothing happens)
+  - two types : set <- mutable and frozen set <- immutable
+  - declaration: Empty set : `id = set()`; set with numbers: `id = set([1,2,3,4])`
+  - add element: `id.add(5)`
+
 **Sequences**
   - Lists, tuples, "range objects"
   - These all support commond sequence operations, but also have methods of their own for specific operations
