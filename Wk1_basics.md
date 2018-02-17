@@ -16,6 +16,15 @@
      - Sort: `listName.sort()` <- *in-place* method Vs Sorted: `newListName = sorted(oldListName)` <- create a new sorted list
      - Count number of objects in list: `len(listName)`
      - NOTE: list operations (except `sorted`) are *in-place* methods i.e. they won't return any values, but modify original list in-place
+  - list comprehension : to calculate square of numbers in a list e.g. `numbers = range(10)`
+    Long way -- for loop
+    ```python
+      for number in numbers:
+        square = number ** 2;
+        squares.append(square)
+    ```
+    Short efficient way -- list comprehension
+    `squares = [numbers**2 for number in numbers]`
 - tuples
   - Declaration: `x = (1,2,3,4)` or `x = (2,)` <- if you want to declare a tuple with a single object. `x = (2)` will be      identified as integer.
   - tuple operations
@@ -28,13 +37,12 @@
     - unpacking : `(a,b) = packedTuple`
     - for loop: if I have a list of tuples 
       
-          ```python
-          
+          ```python 
           coordinates = [(23,45),(32,65),(47,44)]
           for (x,y) in coordinates:
             print(x,y)
-          
           ```
+          
 - ranges : immutable *sequence* of integers
   - Declaration: `range(startingValue,stoppingValue, stepSize)` ; e.g. `range(4)` <- startingValue & step size optional. stoppingValue *non-inclusive* 
   - To view the declared range: `list(range(4))` <- not recommended to convert to list, use as-is to save memory
