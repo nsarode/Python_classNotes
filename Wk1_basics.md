@@ -16,7 +16,8 @@
      - Sort: `listName.sort()` <- *in-place* method Vs Sorted: `newListName = sorted(oldListName)` <- create a new sorted list
      - Count number of objects in list: `len(listName)`
      - NOTE: list operations (except `sorted`) are *in-place* methods i.e. they won't return any values, but modify original list in-place
-  - list comprehension : to calculate square of numbers in a list e.g. `numbers = range(10)`
+  - list comprehension : 
+    - to calculate square of numbers in a list e.g. `numbers = range(10)`
     Long way -- for loop
     ```python
       for number in numbers:
@@ -24,7 +25,11 @@
         squares.append(square)
     ```
     Short efficient way -- list comprehension
+    
     `squares = [numbers**2 for number in numbers]`
+    - sum the odd numbers from 0 through 9
+      `sum([i for i in range(10) if i%2 == 0 ])`
+    
 - tuples
   - Declaration: `x = (1,2,3,4)` or `x = (2,)` <- if you want to declare a tuple with a single object. `x = (2)` will be      identified as integer.
   - tuple operations
@@ -36,12 +41,14 @@
     - packing : adding objects to a tuple e.g. `x = 23`; `y = 38`; `packedTuple = (x,y)`
     - unpacking : `(a,b) = packedTuple`
     - for loop: if I have a list of tuples 
-      
-          ```python 
+  
+  
+  ```python 
           coordinates = [(23,45),(32,65),(47,44)]
           for (x,y) in coordinates:
             print(x,y)
-          ```
+  ```     
+ 
           
 - ranges : immutable *sequence* of integers
   - Declaration: `range(startingValue,stoppingValue, stepSize)` ; e.g. `range(4)` <- startingValue & step size optional. stoppingValue *non-inclusive* 
@@ -126,5 +133,64 @@ Attribute doesn't end with () e.g. `x.shape`
     - boolean types i.e. `True` or `False`, SHOULD be capitalized
     - boolean operations : `and`, `or`, `not`
   
+**Reading and writing files**
+- Reading
+  ```python
+    filename = "read.txt"
+    for line in open(filename):
+      print(line)
+      line = line.rstrip() # this removes the \n at the end of each line and returns a string. And since strings are immutable, have to reassign
+      print(line)
+      line = line.rstrip().split(" ") # will split the \n stripped string by " " and return a list 
+      print(line)
+  ```
+ - Writing
 
+  ```python
+      F = open("output.txt","w") # open a file with 'write' handle
+      F.write("Python\n") # write something. Note that new line is specified
+      F.close() # close file
+  ```
+  
+  ```python
+      F = open("input.txt", "w")
+      F.write("Hello\nWorld")
+      F.close()
+      lines = []
+      for line in open("input.txt"):
+          lines.append(line.strip())
+      print(lines) 
+  ```
+ 
+**Functions**
 
+- maximise code resuse and minimize redundancy by procedural decomposition
+
+```python
+  def add(a,b):
+    mysum = a+b
+    return mysum
+ 
+ add(12,5)
+```
+
+```python
+
+  def sum_and_sub(a,b):
+    mysum = a+b
+    mydiff = a - b
+    return(mysum, mydiff) # return tuple
+```
+
+```python
+  def intersect(s1,s2):
+    res = [] 
+    for x in s1:
+      if x in s2:
+        res.append(x)
+    return res
+```
+
+```python
+  def password()
+```
