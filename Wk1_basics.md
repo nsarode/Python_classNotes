@@ -69,7 +69,7 @@
   - two types : set <- mutable and frozen set <- immutable
   - declaration: Empty set : `id = set()`; set with numbers: `id = set([1,2,3,4,7,8,9])`
   - add element: `id.add(5)`
-  - extremely useful for set operations 
+  - extremely useful for set operations (**note** these return lists)
     - `male = set([3,5])` ; `female = id - male`
     - union operation: `everyone = male | female`
     - interserct: `everyone & set([2,4])`
@@ -192,5 +192,22 @@ Attribute doesn't end with () e.g. `x.shape`
 ```
 
 ```python
-  def password()
+    import random
+    def password(length):
+      pw = str()
+      characters = "oiehowhig"
+      for i in range(length):
+        pw = pw + random.choice(characters) # pw += random.choice(characters) will work too
+      return(pw)
+```
+
+```python
+   def factorial(n):
+   if n == 0:
+     return 1
+   else:
+     N = 1
+     for i in range(1, n+1):
+       N *= i
+     return(N) 
 ```
