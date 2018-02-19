@@ -30,6 +30,9 @@
     - sum the odd numbers from 0 through 9
       `sum([i for i in range(10) if i%2 == 0 ])`
     
+    - Create dictionary
+      `d = {key: value for (key, value) in iterable}`
+    
 - tuples
   - Declaration: `x = (1,2,3,4)` or `x = (2,)` <- if you want to declare a tuple with a single object. `x = (2)` will be      identified as integer.
   - tuple operations
@@ -87,6 +90,35 @@
     - get list of keys or values: `age.keys()` ; `age.values()` <- the returned values here is 'view' object which is updated as you modify the original dictionary
     - determine object membership i.e. if a certain key is in the dictionary: `"ram" in age`
     - you can loop through keys. `for name in age:` or `for name in age.keys():` or if you want to parse in sorter manner `for name in sorted(age.keys()):` or `for name in sorted(age.keys(), reverse = True):`
+    - 
+```python
+    s = 'A - 13, B - 14, C - 29, M - 99'
+    mydict = dict((k.strip(), v.strip()) for k,v in 
+                  (item.split('-') for item in s.split(',')))
+
+    #It does 3 things:
+
+     #   split the string into "<key> - <value>" parts: s.split(',')
+     #   split each part into "<key> ", " <value>" pairs: item.split('-')
+     #   remove the whitespace from each pair: (k.strip(), v.strip())
+
+```
+
+```python
+  string = "abc=123,xyz=456"
+  dict(x.split('=') for x in string.split(','))`
+```  
+```python
+sentence = 'Jim quickly realized that the beautiful gowns are expensive'
+ #  Create a dictionary count_letters with keys consisting of each unique letter in the sentence and values consisting of the number of times each letter is used in this sentence. Count upper case and lower case letters separately in the dictionary.
+
+count_letters = {}
+for letter in sentence:
+    if(letter != ' '):
+        count_letters[letter] = count_letters.get(letter, 0) + 1
+#print(count_letters) 
+```
+
 - `newList = list(oldeList)` or `newList = oldeList[:]` <- two ways of creating copies without both of them referring to the same object
 - the following code will return 3
   ```
