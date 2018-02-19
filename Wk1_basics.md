@@ -89,7 +89,7 @@
     - increment value of a key: `age["ram"] += 1`
     - get list of keys or values: `age.keys()` ; `age.values()` <- the returned values here is 'view' object which is updated as you modify the original dictionary
     - determine object membership i.e. if a certain key is in the dictionary: `"ram" in age`
-    - you can loop through keys. `for name in age:` or `for name in age.keys():` or if you want to parse in sorter manner `for name in sorted(age.keys()):` or `for name in sorted(age.keys(), reverse = True):`
+    - you can loop through keys. `for name in age:` or `for name in age.keys():` or if you want to parse in sorted manner `for name in sorted(age.keys()):` or `for name in sorted(age.keys(), reverse = True):`
     - 
 ```python
     s = 'A - 13, B - 14, C - 29, M - 99'
@@ -242,4 +242,23 @@ Attribute doesn't end with () e.g. `x.shape`
      for i in range(1, n+1):
        N *= i
      return(N) 
+```
+```python
+sentence = 'Jim quickly realized that the beautiful gowns are expensive'
+
+def counter(input_string):
+    my_dict = {}
+    for letter in input_string:
+        if(letter != ' '):
+            my_dict[letter] = my_dict.get(letter, 0) + 1
+    return(my_dict)
+
+address_count = counter(sentence)
+most_frequent_letter = ([letter for letter in address_count.keys() if address_count[letter] == max(address_count.values())])
+most_frequent_letter = most_frequent_letter[0]
+print(most_frequent_letter)
+
+```
+
+```python
 ```
