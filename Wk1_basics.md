@@ -259,6 +259,31 @@ most_frequent_letter = most_frequent_letter[0]
 print(most_frequent_letter)
 
 ```
-
+**Homework** 
+3a: A list of numbers can be very unsmooth, meaning very high numbers can be right next to very low numbers. This list may represent a smooth path in reality that is masked with random noise (for example, satellite trajectories with inaccurate transmission). One way to smooth the values in the list is to replace each value with the average of each value's neighbors, including the value itself.
+Instructions: 
+    Write a function `moving_window_average(x, n_neighbors)` that takes a list `x` and the number of neighbors `n_neighbors` on either side of a given member of the list to consider.
+    For each value in x, `moving_window_average(x, n_neighbors)` computes the average of that value's neighbors, where neighbors includes the value itself.
+    `moving_window_average` should return a list of averaged values that is the same length as the original list.
+    If there are not enough neighbors (for cases near the edge), substitute the original value as many times as there are missing neighbors.
+    Use your function to find the moving window sum of `x=[0,10,5,3,1,5]` and `n_neighbors=1`.
+ 
 ```python
+import random
+random.seed(1)
+
+def moving_window_average(x, n_neighbors=1):
+    n = len(x)
+    width = n_neighbors*2 + 1 # denominator to cal avg - neighbours including the number itself - in this case = 3
+    x = [x[0]]*n_neighbors + x + [x[-1]]*n_neighbors # If there are not enough neighbors (for cases near the edge), substitute the original value as many times as there are missing neighbors. In this case : [0, 0, 10, 5, 3, 1, 5, 5]
+    outlist = []
+    for idx, item in enumerate(x[1:]):
+       # print(idx, item)
+        if idx > 0:
+            outlist.append((x[idx-1] + x[idx] + x[idx+1])/width)
+    return(outlist)
+    
+x=[0,10,5,3,1,5]
+print(moving_window_average(x, 1))
+# worked out (on paper) answer = [3.333, 5.0, 6.0, 3.0, 3.0, 3.666]
 ```
