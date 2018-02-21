@@ -222,7 +222,7 @@ Attribute doesn't end with () e.g. `x.shape`
         res.append(x)
     return res
 ```
-
+**Note** Difference between `random.choice(list)` vs `random.uniform(a,b)`
 ```python
     import random
     def password(length):
@@ -287,3 +287,41 @@ x=[0,10,5,3,1,5]
 print(moving_window_average(x, 1))
 # worked out (on paper) answer = [3.333, 5.0, 6.0, 3.0, 3.0, 3.666]
 ```
+3b:
+- Compute and store `R=1000` random values from 0-1 as `x`.
+- `moving_window_average(x, n_neighbors)` is pre-loaded into memory from 3a. Compute the moving window average for `x` for values of `n_neighbors` ranging from 1 to 9 inclusive.
+- Store `x` as well as each of these averages as consecutive lists in a list called `Y`.
+
+```python
+import random
+
+random.seed(1) # This line fixes the value called by your function,
+               # and is used for answer-checking.
+    
+R = 1000
+x = []
+for n in range(R):
+    ele = random.uniform(0,1) 
+    x.append(ele)
+Y = []
+Y.append(x)
+for i in range(1,10):
+    mavg = moving_window_average(x,n_neighbors=i)
+    Y.append(mavg)
+```
+3c: 
+
+- `moving_window_average(x, n_neighbors=2)` and `Y` are already loaded into memory. For each list in `Y`, calculate and store the range (the maximum minus the minimum) in a new list `ranges`.
+- Print your answer. As the window width increases, does the range of each list increase or decrease? Why do you think that is?
+
+```python
+ranges = []
+# long loop way below
+#for lst in Y:
+#    ranges = (max(lst) - min(lst))
+#    print(ranges)
+ranges = [(max(lst) - min(lst)) for lst in Y] # list comprehension to the rescue !
+print(ranges)
+# The range decreases, because the average smooths a larger number of neighbors. Because the numbers in the original list are just random, we expect the average of many of them to be roughly 1 / 2, and more averaging means more smoothness in this value. 
+```
+
