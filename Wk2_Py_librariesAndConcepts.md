@@ -31,7 +31,6 @@ y.remove_max() # should give [2,35,4,10]
 ```
 
 # Function vs Class
-Source: [Python Function versus Class: what is the difference between using either methods?](https://www.quora.com/Python-
+Source: [Python Function versus Class: what is the difference between using either methods?](https://www.quora.com/Python-Function-versus-Class-what-is-the-difference-between-using-either-methods)
 
-Function-versus-Class-what-is-the-difference-between-using-either-methods)
 Functions are easier to work with and understand than objects. However, one of the key benefits of classes is that they allow _inheritance_. This means you can create a superclass then make subclasses of it that are more specific.
