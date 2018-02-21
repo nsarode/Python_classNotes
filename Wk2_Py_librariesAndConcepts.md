@@ -68,9 +68,9 @@ x[0:2] # slice
 x + y # add elements of array
 # note that this is very different from regular lists which would simply concatanate the two lists
 
-X[:,1] # get first column. Remember the syntax is row,column , so : will give all rows
+X[:,1] # get second column. Remember the syntax is row,column , so : will give all rows
 X[:,1] + Y[:,1]
-X[1,:] # get first row
+X[1,:] # get second row
 X[1] # shorthand notation to get first row as above
 ```
 **Indexing**
