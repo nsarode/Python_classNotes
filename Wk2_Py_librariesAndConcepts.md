@@ -154,3 +154,14 @@ np.all(x > = 0.1) # True
 Source: [Python Function versus Class: what is the difference between using either methods?](https://www.quora.com/Python-Function-versus-Class-what-is-the-difference-between-using-either-methods)
 
 Functions are easier to work with and understand than objects. However, one of the key benefits of classes is that they allow _inheritance_. This means you can create a superclass then make subclasses of it that are more specific.
+
+# Matplotlib and pyplot
+
+`import matplotlib.pyplot as plt`
+
+- simple plot 
+
+```python
+import matplotlib.pyplot as plt
+plt.plot([0,1,4,9,16])
+```
