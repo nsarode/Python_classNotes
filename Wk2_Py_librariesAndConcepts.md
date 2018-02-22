@@ -157,4 +157,4 @@ Functions are easier to work with and understand than objects. However, one of t
 
 # Matplotlib and pyplot
 
-:exclamation: :exclamation: Since this section has numerous plots that I would prefer to be embedded in the markdown file, I am switching over to Jupyter notebook. Head on over to  [Matplotlib Jupyter notebook](../Matplotlib.ipynb)
+:exclamation: :exclamation: Since this section has numerous plots that I would prefer to be embedded in the markdown file, I am switching over to Jupyter notebook. Head on over to  [Matplotlib Jupyter notebook](Matplotlib.ipynb)
