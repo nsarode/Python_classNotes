@@ -37,7 +37,7 @@ y.remove_max() # should give [2,35,4,10]
     - Declaration: `np.array()` with argument is a list. It is good practice to declare matrices with capitalized names
       `x = np.array([1,4,8])`
       
-      `A = np.array([[]1,2],[4,8])` nested list object signifying the rows in the matrix
+      `A = np.array([[1,2],[4,8])` nested list object signifying the rows in the matrix
       
       To transpose the above matrix `A.transpose()`
     - an additional datatype provided by numpy that can be used to represent vectors and matrices
