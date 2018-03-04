@@ -1,12 +1,12 @@
 
-**Getting help**
+# Getting help 
 - `help(function name)` The help function is very handy if all you need is minor clarification on how a specific method works.
 - `type()` is equivalent to class function in R
 - to determine the methods available to you based on the object type
   - dir function with object name or type as input  e.g. `dir(str)` will give you a list of attributes available
   - To get additional help on the attributes: `str.replace?`
 
-**Basics**
+# Basics
 - lists
   - Declaration: `x = [2,44,6,8]`
   - list operations: 
@@ -165,7 +165,7 @@ Attribute doesn't end with () e.g. `x.shape`
     - boolean types i.e. `True` or `False`, SHOULD be capitalized
     - boolean operations : `and`, `or`, `not`
   
-**Reading and writing files**
+## Reading and writing files
 - Reading
   ```python
     filename = "read.txt"
