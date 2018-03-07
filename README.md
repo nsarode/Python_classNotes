@@ -12,3 +12,23 @@ Notes from  HarvardX: PH526x Using Python for Research
     - [Learn how to translate DNA](Learn_how_to_translate_DNA.md)
     - [Learn how to process texts]
     - [Learn how to classify items using the k-nearest neighbors method]
+
+# Uncategorized notes
+
+## Conda for python
+
+### [Installing conda](https://conda.io/docs/user-guide/install/index.html)
+
+Make sure conda installed properly using `conda --version` (if you get `conda command not found` error, odds are adding the path to its bin to your .bash_profile file should do the trick)
+
+Create a new environment for python3.6
+`conda create -n py36 python=3.6 anaconda`
+
+Activate this (or any other created) environment
+`source activate py36`
+
+To install packages in this environment
+`conda install packagename`
+
+To close and clean up
+`source deactivate`
