@@ -15,6 +15,8 @@ Notes from  HarvardX: PH526x Using Python for Research
 
 # Uncategorized notes
 
+## Function code from environment
+
 Often in DataCamp, once you answer is accepted as correct, you could be curious about how the instructors wrote the code. If their function is loaded in the environment, you can see the code as follows 
 
 ```
