@@ -15,6 +15,14 @@ Notes from  HarvardX: PH526x Using Python for Research
 
 # Uncategorized notes
 
+Often in DataCamp, once you answer is accepted as correct, you could be curious about how the instructors wrote the code. If their function is loaded in the environment, you can see the code as follows 
+
+```
+import inspect
+inspect.getsourcelines(functionName)
+
+```
+
 ## Conda for python
 
 ### [Installing conda](https://conda.io/docs/user-guide/install/index.html)
