@@ -84,6 +84,14 @@
   - declaration: 
     - Empty dictionaries: `age = {}` or `age = dict()`
     - with data: `age = {"ram":24, "sita":22, "laxman": 19, "ravan":35}`
+    - From a list of keys and values
+    
+```python
+cluster_colors = ["red", "orange", "green", "blue", "purple", "gray"]
+regions = ["Speyside", "Highlands", "Lowlands", "Islands", "Campbelltown", "Islay"]
+region_colors = dict(zip(regions, cluster_colors))
+
+```
   - operations
     - Derive value of a key: `age["ram"]`
     - increment value of a key: `age["ram"] += 1`
