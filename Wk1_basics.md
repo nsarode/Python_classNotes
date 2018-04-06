@@ -87,6 +87,7 @@
     - From a list of keys and values
     
 ```python
+# cluster_colors = keys and regions = values
 cluster_colors = ["red", "orange", "green", "blue", "purple", "gray"]
 regions = ["Speyside", "Highlands", "Lowlands", "Islands", "Campbelltown", "Islay"]
 region_colors = dict(zip(regions, cluster_colors))
