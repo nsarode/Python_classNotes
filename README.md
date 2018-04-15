@@ -44,4 +44,6 @@ To close and clean up
 `source deactivate`
 
 
+# Certificate of completion !
+
 ![Certificate of completion](/CertificateOfCompletion.png)
