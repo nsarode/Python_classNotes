@@ -43,4 +43,5 @@ To install packages in this environment
 To close and clean up
 `source deactivate`
 
-![Certificate of completion](https://courses.edx.org/certificates/851145ab4e5947ccb9f103d802e69e88)
+
+![Certificate of completion](/CertificateOfCompletion.png)
