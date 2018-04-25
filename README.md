@@ -12,6 +12,7 @@ Notes from  HarvardX: PH526x Using Python for Research
     - [Learn how to translate DNA](Learn_how_to_translate_DNA.md)
     - [Learn how to process texts](case_studies_I.ipynb)
     - [Learn how to classify items using the k-nearest neighbors method](Case_studies_II.ipynb)
+    - Statistical learning
 
 # Uncategorized notes
 
